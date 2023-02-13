@@ -4,9 +4,9 @@ import { GifGrid } from './components/GifGrid';
 
 
 const GifApp=()=>{
-    const  [categories, setCategories]= useState(['Honda', 'Kawasaki', 'Ducatti'])
+    const  [categories, setCategories]= useState(['Honda', 'Kawasaki'])
 
-    let yamaha='Yamaha'
+    
     
 
     // const addBrand =()=>{ 

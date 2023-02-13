@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const AddCategory = ({setCategories}) => {
 
 
-    const [inputValue, setInputValue] = useState("Hola mundo")
+    const [inputValue, setInputValue] = useState("")
 
     const handleInputChange =(e) =>{
         console.log(e)
@@ -15,7 +15,10 @@ export const AddCategory = ({setCategories}) => {
         //no se recarga la pagina con el e.preventDefault()
         e.preventDefault();
         console.log("enviado")
-        setCategories( (nuevo) => [...nuevo, inputValue])
+        if(inputValue.trim().length>2){
+          setCategories( (nuevo) => [ inputValue, ...nuevo ])
+          setInputValue('')
+        }
     }
 
     return (
